@@ -2,7 +2,7 @@
 import time
 import sys
 
-# 5-3.py 음료수 얼려 먹기
+# 5-3.py 음료수 얼려 먹기 => easy
 n, m = map(int, input().split())
 
 arr = []
