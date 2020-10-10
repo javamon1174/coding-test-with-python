@@ -2,7 +2,7 @@
 import time
 
 # 3-4.py 1이 될 때까지
-n, k= map( int, input().split())
+n, k = map( int, input().split())
 
 cnt = 0
 start = time.time()  # 시작 시간 저장
