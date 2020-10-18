@@ -1,28 +1,18 @@
 #  이것이 코딩테스트다 WITH 파이썬
 import sys
 
-# 8-3.py => 개미전사
+# (강의 문제) 3-5.py => 곱하기 혹은 더하기
+int_arr = list(map(int, input()))
+result = int_arr[0]
 
-x = 26
-# x = int(input())
-operate = 0
-
-def get_min_operate_cnt(x, operate):
-
-    if x % 5 == 0:
-        x /= 5
-        operate +=1
-    elif x % 3 == 0:
-        x /= 3
-        operate +=1
-    elif x % 2 == 0:
-        x /= 2
-        operate +=1
-    elif x == 1:
-        return x
+for i in range(1, len(int_arr)):
+    # 결과 값 또는 현재 입력 값 둘 중 하나라도 1보다 작거나 같으면 덧샘
+    if result <= 1 or int_arr[i] <= 1:
+        result += int_arr[i]
     else:
-        x -= 1
-        operate +=1
+        result *= int_arr[i]
 
 
-print("operate", operate)
+# (강의 문제) 3-6.py => 모험가 길드 풀기
+
+print(result)
