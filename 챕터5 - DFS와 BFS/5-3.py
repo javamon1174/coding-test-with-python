@@ -20,8 +20,10 @@ def fill_drink(x, y):
     if arr[x][y] == 1 or c_arr[x][y] == 1:
         return False
 
+    # 음료수 채움
     c_arr[x][y] = 1
     
+    # 인접 칸 채움
     fill_drink(x-1, y)
     fill_drink(x+1, y)
     fill_drink(x, y-1)
