@@ -1,28 +1,19 @@
 #  이것이 코딩테스트다 WITH 파이썬
 import sys
 
-# 8-2.py => 1로 만들기 => 틀림
+# 챕터8 다이나믹 프로그래밍 => 1로 만들기
+n = int(input())
+res = [0] * 30001
 
-x = 26
-# x = int(input())
-operate = 0
+for i in range(2, n+1):
+    res[i] = res[i - 1] + 1
 
-def get_min_operate_cnt(x, operate):
+    # 업데이트 방식(보텀업))
+    if i % 2 == 0: # 인덱스를 매개로 나머지가 0일 경우
+        res[i] = min(res[i], res[i // 2] + 1)
+    if i % 3 == 0:
+        res[i] = min(res[i], res[i // 3] + 1)
+    if i % 5 == 0:
+        res[i] = min(res[i], res[i // 5] + 1)
 
-    if x % 5 == 0:
-        x /= 5
-        operate +=1
-    elif x % 3 == 0:
-        x /= 3
-        operate +=1
-    elif x % 2 == 0:
-        x /= 2
-        operate +=1
-    elif x == 1:
-        return x
-    else:
-        x -= 1
-        operate +=1
-
-
-print("operate", operate)
+print(res[n])
