@@ -2,8 +2,9 @@
 import sys
 
 
-def training_4(): #
+def training_4(): # DFS => 스택 혹은 재귀 활용
     pass
+
 
 
 training_4()
