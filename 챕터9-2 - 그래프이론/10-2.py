@@ -12,7 +12,6 @@ def find_parent(parent, x):
     return parent[x]
 
 
-# 10-2 문제 - 팀결성
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
@@ -23,6 +22,7 @@ def union_parent(parent, a, b):
         parent[a] = b
 
 
+# 10-2 문제 - 팀결성
 def work():
     n, m = list(map(int, input().split(' '))) # 팀 수, 연산 수 입력 받기
     parent = [0] * (n + 1) # 부모 테이블 초기화
